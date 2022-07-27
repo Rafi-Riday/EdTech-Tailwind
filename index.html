@@ -22,35 +22,48 @@
 </head>
 
 <body>
-    <header>
+    <header class="max-w-7xl m-auto px-5 md:px-12 lg:px-24">
         <!-- Navigation Starts -->
         <nav
-            class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white ">
-            <div>
+            class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg glass 
+            shadow-xl fixed -top-1 md:top-0 left-0 right-0 z-50 2xl:relative 2xl:top-3 2xl:border-0 2xl:shadow-none 2xl:bg-white">
+            <div class="md:flex md:grow lg:grow-0">
                 <a href="#">Name Nai</a>
             </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block"
+            <div class="hidden w-full md:flex md:mr-2 lg:mr-0 md:w-auto order-last md:order-none lg:order-last"
+                id="menu2">
+                <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+                    <li>
+                        <a class="md:p-4 py-2 block btn my-1" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer lg:hidden block"
                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
 
-            <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-                <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between  md:pt-0">
+            <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
+                <ul class="pt-4 text-base text-gray-700 lg:flex lg:justify-between lg:pt-0">
                     <li>
-                        <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Features</a>
+                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Pricing</a>
+                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Courses</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Customers</a>
+                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Deals</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Blog</a>
+                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Success</a>
                     </li>
                     <li>
-                        <a class="md:p-4 py-2 block hover:text-purple-400 text-purple-500" href="#">Sign Up</a>
+                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">About</a>
+                    </li>
+                    <li>
+                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Register</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +71,7 @@
         <!-- Navigation ends -->
 
         <!-- slider starts -->
-        <div class="carousel w-full">
+        <div class="carousel w-full my-14 2xl:mt-6">
             <div id="slide1" class="carousel-item relative w-full">
                 <img src="img/cover/cover-1.png" class="w-full" />
                 <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -84,12 +97,19 @@
         <!-- slider ends -->
     </header>
 
+    <main>
+    </main>
+
     <!-- script for navbar -->
     <script>
         const button = document.querySelector('#menu-button');
         const menu = document.querySelector('#menu');
+        const menu2 = document.querySelector('#menu2');
         button.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+        button.addEventListener('click', () => {
+            menu2.classList.toggle('hidden');
         });
     </script>
 </body>
