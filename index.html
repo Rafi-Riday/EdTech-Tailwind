@@ -13,7 +13,8 @@
                 screens: {
                     'sm': '640px',
                     'md': '768px',
-                    'lg': '1042px',
+                    'lg': '1024px',
+                    '2lg': '1060px',
                     'xl': '1280px',
                     '2xl': '1536px',
                 },
@@ -31,7 +32,7 @@
 </head>
 
 <body>
-    <header class="2xl:max-w-7xl m-auto md:px-12 lg:px-24 text-dracula_text">
+    <header class="2xl:max-w-7xl mx-auto text-dracula_text">
         <!-- Navigation Starts -->
         <nav id="navbar"
             class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg glass 
@@ -82,62 +83,67 @@
         <div id="spot"></div>
 
         <!-- slider starts -->
-        <div class="carousel w-full mt-0 2xl:mt-24 text-center">
-            <div id="slide1" class="carousel-item relative w-full">
-                <img src="img/cover/cover-1.png" class="w-full" />
-                <div class="absolute flex justify-between h-full w-full">
-                    <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-600">❮</a>
-                    <div
-                        class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
-                        <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
-                            Digital<br>Learning
-                        </h1>
-                        <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will be
-                            distracted by the
-                            readable content of a
-                            page when looking at its layout.</p>
-                        <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
-                                Started</small></button>
+        <div class=" md:px-12 lg:px-24">
+            <div class="carousel w-full mt-0 2xl:mt-24 text-center">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="img/cover/cover-1.png" class="w-full" />
+                    <div class="absolute flex justify-between h-full w-full">
+                        <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-600">❮</a>
+                        <div
+                            class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
+                            <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
+                                Digital<br>Learning
+                            </h1>
+                            <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will
+                                be
+                                distracted by the
+                                readable content of a
+                                page when looking at its layout.</p>
+                            <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
+                                    Started</small></button>
+                        </div>
+                        <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❯</a>
                     </div>
-                    <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❯</a>
                 </div>
-            </div>
-            <div id="slide2" class="carousel-item relative w-full">
-                <img src="img/cover/cover-2.png" class="w-full" />
-                <div class="absolute flex justify-between h-full w-full">
-                    <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❮</a>
-                    <div
-                        class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
-                        <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
-                            Digital<br>Learning
-                        </h1>
-                        <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will be
-                            distracted by the
-                            readable content of a
-                            page when looking at its layout.</p>
-                        <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
-                                Started</small></button>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="img/cover/cover-2.png" class="w-full" />
+                    <div class="absolute flex justify-between h-full w-full">
+                        <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❮</a>
+                        <div
+                            class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
+                            <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
+                                Digital<br>Learning
+                            </h1>
+                            <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will
+                                be
+                                distracted by the
+                                readable content of a
+                                page when looking at its layout.</p>
+                            <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
+                                    Started</small></button>
+                        </div>
+                        <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-500">❯</a>
                     </div>
-                    <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-500">❯</a>
                 </div>
-            </div>
-            <div id="slide3" class="carousel-item relative w-full">
-                <img src="img/cover/cover-3.png" class="w-full" />
-                <div class="absolute flex justify-between h-full w-full">
-                    <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❮</a>
-                    <div
-                        class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
-                        <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
-                            Digital<br>Learning
-                        </h1>
-                        <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will be
-                            distracted by the
-                            readable content of a
-                            page when looking at its layout.</p>
-                        <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
-                                Started</small></button>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="img/cover/cover-3.png" class="w-full" />
+                    <div class="absolute flex justify-between h-full w-full">
+                        <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❮</a>
+                        <div
+                            class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
+                            <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
+                                Digital<br>Learning
+                            </h1>
+                            <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will
+                                be
+                                distracted by the
+                                readable content of a
+                                page when looking at its layout.</p>
+                            <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
+                                    Started</small></button>
+                        </div>
+                        <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❯</a>
                     </div>
-                    <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❯</a>
                 </div>
             </div>
         </div>
@@ -160,8 +166,10 @@
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-1.png" alt="course 1">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
-                    <h2 class="card-title text-base md:text-2xl">Fundamental Of UI/UX Design</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
+                    <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Fundamental Of UI/UX Design
+                    </h2>
+                    <p class="text-sm md:text-base lg:text-sm 2lg:text-base">Some quick example text to build on the
+                        card title and make up the
                         bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
@@ -173,8 +181,10 @@
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-2.png" alt="course 2">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
-                    <h2 class="card-title text-base md:text-2xl">Javascript Basic to advanced</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
+                    <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Javascript Basic to advanced
+                    </h2>
+                    <p class="text-sm md:text-base lg:text-sm 2lg:text-base">Some quick example text to build on the
+                        card title and make up the
                         bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
@@ -186,8 +196,9 @@
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-3.png" alt="course 3">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
-                    <h2 class="card-title text-base md:text-2xl">Fullstack Web Development</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
+                    <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Fullstack Web Development</h2>
+                    <p class="text-sm md:text-base">Some quick example text to build on the lg on the text-sm on the
+                        card title and make up the
                         bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
@@ -199,9 +210,9 @@
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-4.png" alt="course 4">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
-                    <h2 class="card-title text-base md:text-2xl">Digital Marketing</h2>
+                    <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Digital Marketing</h2>
                     <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
-                        bulk of the card.</p>
+                        lg text-sm 2lg bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
                     </div>
@@ -212,8 +223,9 @@
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-5.png" alt="course 5">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
-                    <h2 class="card-title text-base md:text-2xl">Photography Basic Rules</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
+                    <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Photography Basic Rules</h2>
+                    <p class="text-sm md:text-base">Some quick example text to build on the lg on the text-sm on the
+                        card title and make up the
                         bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
@@ -225,9 +237,9 @@
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-6.png" alt="course 6">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
-                    <h2 class="card-title text-base md:text-2xl">Motion Graphics</h2>
+                    <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Motion Graphics</h2>
                     <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
-                        bulk of the card.</p>
+                        lg text-sm 2lg bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
                     </div>
