@@ -166,7 +166,7 @@
                 content of a page when
                 looking at its layout.</p>
             <!-- item 1 -->
-            <article class="card md:card-side glass shadow-xl">
+            <article class="card md:card-side glass bg-slate-700 hover:bg-slate-800 shadow-xl">
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-1.png" alt="course 1">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
@@ -181,7 +181,7 @@
                 </div>
             </article>
             <!-- item 2 -->
-            <article class="card md:card-side glass shadow-xl">
+            <article class="card md:card-side glass bg-slate-700 hover:bg-slate-800 shadow-xl">
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-2.png" alt="course 2">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
@@ -196,7 +196,7 @@
                 </div>
             </article>
             <!-- item 3 -->
-            <article class="card md:card-side glass shadow-xl">
+            <article class="card md:card-side glass bg-slate-700 hover:bg-slate-800 shadow-xl">
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-3.png" alt="course 3">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
@@ -210,7 +210,7 @@
                 </div>
             </article>
             <!-- item 4 -->
-            <article class="card md:card-side glass shadow-xl">
+            <article class="card md:card-side glass bg-slate-700 hover:bg-slate-800 shadow-xl">
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-4.png" alt="course 4">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
@@ -223,7 +223,7 @@
                 </div>
             </article>
             <!-- item 5 -->
-            <article class="card md:card-side glass shadow-xl">
+            <article class="card md:card-side glass bg-slate-700 hover:bg-slate-800 shadow-xl">
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-5.png" alt="course 5">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
@@ -237,7 +237,7 @@
                 </div>
             </article>
             <!-- item 6 -->
-            <article class="card md:card-side glass shadow-xl">
+            <article class="card md:card-side glass bg-slate-700 hover:bg-slate-800 shadow-xl">
                 <figure><img class="w-full h-auto md:h-full md:w-auto" src="img/course/course-6.png" alt="course 6">
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
@@ -265,7 +265,8 @@
             </div>
             <div>
                 <label for="modal-register"
-                    class="md:p-4 py-2 btn btn-info modal-button my-1 bg-white text-sky-500">Register Now</label>
+                    class="md:p-4 py-2 btn btn-info modal-button my-1 bg-white hover:bg-slate-200 text-sky-500">Register
+                    Now</label>
             </div>
         </section>
         <!-- registration ends -->
@@ -307,16 +308,13 @@
     </script>
     <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
     <input type="checkbox" id="modal-register" class="modal-toggle" />
-    <div class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-            <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+    <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
+        <label class="modal-box relative glass bg-sky-900 hover:bg-sky-700" for="">
+            <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
             <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!
             </p>
-            <div class="modal-action">
-                <label for="modal-register" class="btn">Yay!</label>
-            </div>
-        </div>
-    </div>
+        </label>
+    </label>
 </body>
 
 </html>
