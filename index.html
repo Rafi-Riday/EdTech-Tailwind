@@ -283,60 +283,7 @@
     Script to activate navbar
     Copy-Paste Scripts :)
     -->
-    <script>
-        //
-        function toggle_nav() {
-            var body_width = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth
-
-            if (body_width < 1024) {
-                // const menu = document.querySelector('#menu');
-                // menu.classList.toggle('hidden');
-                // const menu2 = document.querySelector('#menu2');
-                // menu2.classList.toggle('hidden');
-
-                const menu = document.querySelectorAll("#menu");
-                for (let i = 0; i < menu.length; i++) {
-                    menu[i].classList.toggle('hidden');
-                }
-
-                const nav_end = document.querySelector('#nav_end');
-                nav_end.classList.toggle("top-[-10%]");
-                const slider = document.querySelector('#slider');
-                if (slider.classList.contains("signal_scrolled")) { }
-                else {
-                    slider.classList.toggle("mt-[60px]");
-                }
-            }
-        }
-        // const menu = document.querySelectorAll("#menu");
-        // for (let i = 0; i < menu.length; i++) {
-        //     menu[i].classList.toggle('hidden');
-        // }
-        //
-        const navbar = document.querySelector('#navbar');
-        const nav_end = document.querySelector('#nav_end');
-        const slider = document.querySelector('#slider');
-        const handleScroll = (entries) => {
-            const nav_endIsVisible = entries[0].isIntersecting;
-            if (nav_endIsVisible) {
-                navbar.classList.remove("fixed");
-                slider.classList.remove("signal_scrolled");
-            }
-            else {
-                navbar.classList.add("fixed");
-                slider.classList.add("signal-scrolled");
-
-            }
-        };
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshhold: 0,
-        };
-        const observer = new IntersectionObserver(handleScroll, options);
-        observer.observe(nav_end);
-        //
-    </script>
+    <script src="navbar.js"></script>
     <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
     <input type="checkbox" id="modal-register" class="modal-toggle" />
     <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
