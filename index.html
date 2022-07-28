@@ -58,22 +58,22 @@
             <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
                 <ul class="pt-4 text-base lg:flex lg:justify-between lg:pt-0">
                     <li>
-                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Home</a>
+                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Courses</a>
+                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Courses</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Deals</a>
+                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Deals</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Success</a>
+                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Success</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">About</a>
+                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">About</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Register</a>
+                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Register</a>
                     </li>
                 </ul>
             </div>
@@ -287,15 +287,18 @@
         button.addEventListener('click', () => {
             menu2.classList.toggle('hidden');
         });
-        //
 
         //
         const navbar = document.querySelector('#navbar');
         const nav_end = document.querySelector('#nav_end');
         const handleScroll = (entries) => {
             const nav_endIsVisible = entries[0].isIntersecting;
-            if (nav_endIsVisible) navbar.classList.remove("fixed");
-            else navbar.classList.add("fixed");
+            if (nav_endIsVisible) {
+                navbar.classList.remove("fixed");
+            }
+            else {
+                navbar.classList.add("fixed");
+            }
         };
         const options = {
             // root: null,
@@ -309,7 +312,7 @@
     <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
     <input type="checkbox" id="modal-register" class="modal-toggle" />
     <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
-        <label class="modal-box relative glass bg-sky-900 hover:bg-sky-700" for="">
+        <label class="modal-box relative glass bg-[#0c4a6e44] hover:bg-[#036aa144]" for="">
             <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
             <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!
             </p>
