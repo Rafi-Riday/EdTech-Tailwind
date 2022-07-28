@@ -42,7 +42,7 @@
             </div>
 
             <div class="hidden w-full md:flex md:mr-4 lg:mr-0 md:w-auto order-last md:order-none lg:order-last"
-                id="menu2">
+                id="menu">
                 <ul class="pt-4 text-base md:flex md:justify-between md:pt-0">
                     <li>
                         <label for="modal-register" class="md:p-4 py-2 btn btn-info modal-button my-1">Register</label>
@@ -50,40 +50,46 @@
                 </ul>
             </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer lg:hidden block"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="toggle_nav()"
+                class="h-6 w-6 cursor-pointer lg:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
 
             <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
                 <ul class="pt-4 text-base lg:flex lg:justify-between lg:pt-0">
                     <li>
-                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Home</a>
+                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
+                            href="#">Home</a>
                     </li>
                     <li>
-                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Courses</a>
+                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
+                            href="#">Courses</a>
                     </li>
                     <li>
-                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Deals</a>
+                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
+                            href="#">Deals</a>
                     </li>
                     <li>
-                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Success</a>
+                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
+                            href="#">Success</a>
                     </li>
                     <li>
-                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">About</a>
+                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
+                            href="#">About</a>
                     </li>
                     <li>
-                        <a id="menu-button-inner" class=" lg:p-4 py-2 btn btn-ghost font-medium" href="#">Register</a>
+                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
+                            href="#">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- Navigation ends -->
 
-        <div id="nav_end"></div>
+        <div id="nav_end" class="w-0 h-6 bg-red-500 absolute z-40 top-[60px]"></div>
 
         <!-- slider starts -->
-        <div class=" md:px-12 lg:px-24">
+        <div id="slider" class="md:px-12 lg:px-24">
             <div class="carousel w-full mt-0 2xl:mt-24 text-center">
                 <div id="slide1" class="carousel-item relative w-full">
                     <img src="img/cover/cover-1.png" class="w-full" />
@@ -151,6 +157,7 @@
             </div>
         </div>
         <!-- slider ends -->
+
     </header>
 
     <main
@@ -278,32 +285,53 @@
     -->
     <script>
         //
-        const button = document.querySelector('#menu-button');
-        const menu = document.querySelector('#menu');
-        const menu2 = document.querySelector('#menu2');
-        button.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-        button.addEventListener('click', () => {
-            menu2.classList.toggle('hidden');
-        });
+        function toggle_nav() {
+            var body_width = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth
 
+            if (body_width < 1024) {
+                // const menu = document.querySelector('#menu');
+                // menu.classList.toggle('hidden');
+                // const menu2 = document.querySelector('#menu2');
+                // menu2.classList.toggle('hidden');
+
+                const menu = document.querySelectorAll("#menu");
+                for (let i = 0; i < menu.length; i++) {
+                    menu[i].classList.toggle('hidden');
+                }
+
+                const nav_end = document.querySelector('#nav_end');
+                nav_end.classList.toggle("top-[-10%]");
+                const slider = document.querySelector('#slider');
+                if (slider.classList.contains("signal_scrolled")) { }
+                else {
+                    slider.classList.toggle("mt-[60px]");
+                }
+            }
+        }
+        // const menu = document.querySelectorAll("#menu");
+        // for (let i = 0; i < menu.length; i++) {
+        //     menu[i].classList.toggle('hidden');
+        // }
         //
         const navbar = document.querySelector('#navbar');
         const nav_end = document.querySelector('#nav_end');
+        const slider = document.querySelector('#slider');
         const handleScroll = (entries) => {
             const nav_endIsVisible = entries[0].isIntersecting;
             if (nav_endIsVisible) {
                 navbar.classList.remove("fixed");
+                slider.classList.remove("signal_scrolled");
             }
             else {
                 navbar.classList.add("fixed");
+                slider.classList.add("signal-scrolled");
+
             }
         };
         const options = {
-            // root: null,
-            // rootMargin: "0px",
-            // threshhold: 0,
+            root: null,
+            rootMargin: "0px",
+            threshhold: 0,
         };
         const observer = new IntersectionObserver(handleScroll, options);
         observer.observe(nav_end);
