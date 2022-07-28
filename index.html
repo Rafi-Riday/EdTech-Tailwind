@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="dracula" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        slider_bg: '#1d1d1db3',
+                        dracula_text: '#f8f8f2',
                     }
                 }
             }
@@ -22,20 +24,19 @@
 </head>
 
 <body>
-    <header class="max-w-7xl m-auto px-5 md:px-12 lg:px-24">
+    <header class="max-w-7xl m-auto px-5 md:px-12 lg:px-24 text-dracula_text">
         <!-- Navigation Starts -->
-        <nav
-            class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg glass 
-            shadow-xl fixed -top-1 md:top-0 left-0 right-0 z-50 2xl:relative 2xl:top-3 2xl:border-0 2xl:shadow-none 2xl:bg-white">
-            <div class="md:flex md:grow lg:grow-0">
+        <nav class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg glass 
+            shadow-xl fixed -top-1 md:top-0 left-0 right-0 z-50 2xl:relative 2xl:top-3 2xl:border-0 2xl:shadow-none">
+            <div class="md:flex md:grow lg:grow-0 font-extrabold">
                 <a href="#">Name Nai</a>
             </div>
 
-            <div class="hidden w-full md:flex md:mr-2 lg:mr-0 md:w-auto order-last md:order-none lg:order-last"
+            <div class="hidden w-full md:flex md:mr-4 lg:mr-0 md:w-auto order-last md:order-none lg:order-last"
                 id="menu2">
-                <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+                <ul class="pt-4 text-base md:flex md:justify-between md:pt-0">
                     <li>
-                        <a class="md:p-4 py-2 block btn my-1" href="#">Register</a>
+                        <a class="md:p-4 py-2 btn btn-info my-1" href="#">Register</a>
                     </li>
                 </ul>
             </div>
@@ -46,51 +47,88 @@
             </svg>
 
             <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="menu">
-                <ul class="pt-4 text-base text-gray-700 lg:flex lg:justify-between lg:pt-0">
+                <ul class="pt-4 text-base lg:flex lg:justify-between lg:pt-0">
                     <li>
-                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Home</a>
+                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Home</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Courses</a>
+                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Courses</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Deals</a>
+                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Deals</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Success</a>
+                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Success</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">About</a>
+                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">About</a>
                     </li>
                     <li>
-                        <a class="lg:p-4 py-2 block hover:text-purple-400" href="#">Register</a>
+                        <a class="lg:p-4 py-2 btn btn-ghost font-medium" href="#">Register</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- Navigation ends -->
 
+        <!-- <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"> -->
         <!-- slider starts -->
-        <div class="carousel w-full my-14 2xl:mt-6">
+        <div class="carousel w-full my-14 2xl:mt-6 text-center">
             <div id="slide1" class="carousel-item relative w-full">
                 <img src="img/cover/cover-1.png" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn glass btn-sm sm:btn-lg">❮</a>
-                    <a href="#slide2" class="btn glass btn-sm sm:btn-lg">❯</a>
+                <div class="absolute flex justify-between h-full w-full">
+                    <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-600">❮</a>
+                    <div
+                        class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
+                        <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
+                            Digital<br>Learning
+                        </h1>
+                        <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will be
+                            distracted by the
+                            readable content of a
+                            page when looking at its layout.</p>
+                        <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
+                                Started</small></button>
+                    </div>
+                    <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❯</a>
                 </div>
             </div>
             <div id="slide2" class="carousel-item relative w-full">
                 <img src="img/cover/cover-2.png" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn glass btn-sm sm:btn-lg">❮</a>
-                    <a href="#slide3" class="btn glass btn-sm sm:btn-lg">❯</a>
+                <div class="absolute flex justify-between h-full w-full">
+                    <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❮</a>
+                    <div
+                        class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
+                        <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
+                            Digital<br>Learning
+                        </h1>
+                        <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will be
+                            distracted by the
+                            readable content of a
+                            page when looking at its layout.</p>
+                        <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
+                                Started</small></button>
+                    </div>
+                    <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-500">❯</a>
                 </div>
             </div>
             <div id="slide3" class="carousel-item relative w-full">
                 <img src="img/cover/cover-3.png" class="w-full" />
-                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn glass btn-sm sm:btn-lg">❮</a>
-                    <a href="#slide1" class="btn glass btn-sm sm:btn-lg">❯</a>
+                <div class="absolute flex justify-between h-full w-full">
+                    <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❮</a>
+                    <div
+                        class="bg-slider_bg grow flex flex-col justify-center items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 px-3 sm:px-5 md:px-7 lg:px-9">
+                        <h1 class="text-center text-xl md:text-4xl lg:text-6xl font-semibold">Get Started
+                            Digital<br>Learning
+                        </h1>
+                        <p class="text-xs md:text-base lg:text-lg">It is a long established fact that a reader will be
+                            distracted by the
+                            readable content of a
+                            page when looking at its layout.</p>
+                        <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
+                                Started</small></button>
+                    </div>
+                    <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg">❯</a>
                 </div>
             </div>
         </div>
