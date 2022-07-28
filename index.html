@@ -45,7 +45,7 @@
                 id="menu2">
                 <ul class="pt-4 text-base md:flex md:justify-between md:pt-0">
                     <li>
-                        <a class="md:p-4 py-2 btn btn-info my-1" href="#">Register</a>
+                        <label for="modal-register" class="md:p-4 py-2 btn btn-info modal-button my-1">Register</label>
                     </li>
                 </ul>
             </div>
@@ -99,8 +99,9 @@
                                 distracted by the
                                 readable content of a
                                 page when looking at its layout.</p>
-                            <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
-                                    Started</small></button>
+                            <label for="modal-register"
+                                class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg modal-button"><small>Get
+                                    Started</small></label>
                         </div>
                         <a href="#slide2" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-800">❯</a>
                     </div>
@@ -119,8 +120,9 @@
                                 distracted by the
                                 readable content of a
                                 page when looking at its layout.</p>
-                            <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
-                                    Started</small></button>
+                            <label for="modal-register"
+                                class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg modal-button"><small>Get
+                                    Started</small></label>
                         </div>
                         <a href="#slide3" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-800">❯</a>
                     </div>
@@ -139,8 +141,9 @@
                                 distracted by the
                                 readable content of a
                                 page when looking at its layout.</p>
-                            <button class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg"><small>Get
-                                    Started</small></button>
+                            <label for="modal-register"
+                                class="btn btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg modal-button"><small>Get
+                                    Started</small></label>
                         </div>
                         <a href="#slide1" class="btn glass btn-sm h-full rounded-none sm:btn-lg text-slate-800">❯</a>
                     </div>
@@ -150,7 +153,8 @@
         <!-- slider ends -->
     </header>
 
-    <main class="px-4 md:px-5 lg:px-6">
+    <main
+        class="px-4 md:px-5 lg:px-6 flex flex-col items-center gap-10 md:gap-16 lg:gap-24 2lg:gap-32 py-10 md:py-16 lg:py-24 2lg:py-32">
         <!-- course starts -->
         <section
             class="2xl:max-w-7xl mx-auto text-dracula_text grid justify-items-stretch grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
@@ -253,14 +257,15 @@
         <section
             class="2xl:max-w-7xl mx-auto text-dracula_text rounded-lg bg-sky-600 flex gap-5 flex-col items-center lg:flex-row lg:justify-between px-4 md:px-24 py-7 md:py-14 lg:py-20 text-center lg:text-left">
             <div class="lg:w-7/12 2lg:w-6/12">
-                <h1>Ready to join?</h1>
-                <p>It is a long established fact that a reader will be distracted by the
+                <h1 class="font-bold text-lg md:text-3xl lg:text-4xl">Ready to join?</h1>
+                <hr class="border-0 my-1 md:my-3">
+                <p class="text-sm md:text-base">It is a long established fact that a reader will be distracted by the
                     readable content of a page when looking at its layout.
                 </p>
             </div>
             <div>
-                <button class="md:p-4 py-2 btn btn-info my-1 bg-white text-sky-500" href="#">Register
-                    Now</button>
+                <label for="modal-register"
+                    class="md:p-4 py-2 btn btn-info modal-button my-1 bg-white text-sky-500">Register Now</label>
             </div>
         </section>
         <!-- registration ends -->
@@ -300,6 +305,18 @@
         observer.observe(nav_end);
         //
     </script>
+    <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
+    <input type="checkbox" id="modal-register" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+            <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+            </p>
+            <div class="modal-action">
+                <label for="modal-register" class="btn">Yay!</label>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
