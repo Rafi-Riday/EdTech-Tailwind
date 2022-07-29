@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b9f92f6b81.js" crossorigin="anonymous"></script>
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css" rel="stylesheet" type="text/css" />
     <!-- Tailwind -->
@@ -285,13 +287,30 @@
         <!-- registration ends -->
     </main>
 
+    <!-- footer starts -->
+    <footer class="footer footer-center p-10 glass bg-black hover:bg-black text-dracula_color gap-4">
+        <h2 class="font-bold text-3xl md:text-4xl">Tragic Bytes</h2>
+        <p class="text-sm md:text-base">Providing reliable tech since 1992<br>Copyright © 2022 - All right reserved</p>
+        <div class="grid grid-flow-col gap-4">
+            <a><i
+                    class="fa-brands fa-facebook-f btn btn-circle btn-outline glass btn-sm text-lg text-dracula_color hover:text-dracula_color"></i></a>
+            <a><i
+                    class="fa-brands fa-twitter btn btn-circle btn-outline glass btn-sm text-lg text-dracula_color hover:text-dracula_color"></i></a>
+            <a><i
+                    class="fa-brands fa-linkedin-in btn btn-circle btn-outline glass btn-sm text-lg text-dracula_color hover:text-dracula_color"></i></a>
+            <a><i
+                    class="fa-brands fa-youtube btn btn-circle btn-outline glass btn-sm text-lg text-dracula_color hover:text-dracula_color"></i></a>
+        </div>
+    </footer>
+    <!-- footer ends -->
+
     <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
     <input type="checkbox" id="modal-register" class="modal-toggle" />
     <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
         <label
             class="modal-box relative glass bg-[#0c4a6e44] hover:bg-[#036aa144] flex flex-col justify-center items-center gap-2">
             <!-- Title -->
-            <h3 class="text-lg font-bold">Register and Get Tons of Courses</h3>
+            <h3 class="text-lg font-bold">Register and Get Tons of Courses!</h3>
             <form class="form-control flex flex-col gap-2">
                 <label class="input-group">
                     <span>Email</span>
