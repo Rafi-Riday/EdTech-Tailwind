@@ -19,7 +19,7 @@
                     'sm': '640px',
                     'md': '768px',
                     'lg': '1024px',
-                    '2lg': '1060px',
+                    '2lg': '1158px',
                     'xl': '1280px',
                     '2xl': '1536px',
                 },
@@ -70,7 +70,7 @@
                     </li>
                     <li>
                         <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
-                            href="#">Courses</a>
+                            href="#courses">Courses</a>
                     </li>
                     <li>
                         <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
@@ -83,10 +83,6 @@
                     <li>
                         <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
                             href="#">About</a>
-                    </li>
-                    <li>
-                        <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
-                            href="#">Register</a>
                     </li>
                 </ul>
             </div>
@@ -168,11 +164,10 @@
     </header>
 
     <main
-        class="px-4 md:px-5 lg:px-6 flex flex-col items-center gap-10 md:gap-16 lg:gap-24 2lg:gap-32 py-10 md:py-16 lg:py-24 2lg:py-32">
+        class="2xl:max-w-7xl mx-auto text-dracula_color px-4 md:px-5 lg:px-6 flex flex-col items-center gap-10 md:gap-16 lg:gap-24 2lg:gap-32 py-10 md:py-16 lg:py-24 2lg:py-32">
 
         <!-- course starts -->
-        <section
-            class="2xl:max-w-7xl mx-auto text-dracula_color grid justify-items-stretch grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
+        <section id="courses" class="grid justify-items-stretch grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
             <h1 class="text-center font-semibold text-lg md:text-3xl lg:text-5xl lg:col-span-2">Discover Our Popular
                 Courses</h1>
             <p class="text-center lg:col-span-2 text-sm md:text-base">It is a long established fact that a reader will
@@ -216,7 +211,8 @@
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
                     <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Fullstack Web Development</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the lg on the text-sm on the
+                    <p class="text-sm md:text-base lg:text-sm 2lg:text-base">Some quick example text to build on the lg
+                        on the text-sm on the
                         card title and make up the
                         bulk of the card.</p>
                     <div class="card-actions justify-start">
@@ -230,7 +226,8 @@
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
                     <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Digital Marketing</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
+                    <p class="text-sm md:text-base lg:text-sm 2lg:text-base">Some quick example text to build on the
+                        card title and make up the
                         lg text-sm 2lg bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
@@ -243,7 +240,8 @@
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
                     <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Photography Basic Rules</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the lg on the text-sm on the
+                    <p class="text-sm md:text-base lg:text-sm 2lg:text-base">Some quick example text to build on the lg
+                        on the text-sm on the
                         card title and make up the
                         bulk of the card.</p>
                     <div class="card-actions justify-start">
@@ -257,7 +255,8 @@
                 </figure>
                 <div class="card-body lg:py-3 lg:px-5">
                     <h2 class="card-title text-base md:text-2xl lg:text-lg 2lg:text-2xl">Motion Graphics</h2>
-                    <p class="text-sm md:text-base">Some quick example text to build on the card title and make up the
+                    <p class="text-sm md:text-base lg:text-sm 2lg:text-base">Some quick example text to build on the
+                        card title and make up the
                         lg text-sm 2lg bulk of the card.</p>
                     <div class="card-actions justify-start">
                         <button class="btn btn-outline btn-info">Price : 20$</button>
@@ -270,7 +269,7 @@
 
         <!-- registration starts -->
         <section
-            class="2xl:max-w-7xl mx-auto text-dracula_color rounded-lg bg-sky-600 flex gap-5 flex-col items-center lg:flex-row lg:justify-between px-4 md:px-24 py-7 md:py-14 lg:py-20 text-center lg:text-left">
+            class="rounded-lg bg-sky-600 flex gap-5 flex-col items-center lg:flex-row lg:justify-between px-4 md:px-24 py-7 md:py-14 lg:py-20 text-center lg:text-left">
             <div class="lg:w-7/12 2lg:w-6/12">
                 <h1 class="font-bold text-lg md:text-3xl lg:text-4xl">Ready to join?</h1>
                 <hr class="border-0 my-1 md:my-3">
@@ -285,6 +284,95 @@
             </div>
         </section>
         <!-- registration ends -->
+
+        <!-- FAQ stats -->
+        <section class="w-full">
+            <div class="grid grid-cols-1 gap-4 md:gap-5">
+                <!-- Question 1 -->
+                <div class="collapse collapse-arrow">
+                    <input type="checkbox" class="peer" />
+                    <div
+                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
+                        Flexbox VS Grid
+                    </div>
+                    <div
+                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
+                        The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed
+                        for layout in one dimension - either a row or a column. Grid was designed for two-dimensional
+                        layout - rows, and columns at the same time. The two specifications share some common features.
+                        Grid is much newer than Flexbox and has a bit less browser support.
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="collapse collapse-arrow">
+                    <input type="checkbox" class="peer" />
+                    <div
+                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
+                        Tailwind VS Bootstrap
+                    </div>
+                    <div
+                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
+                        Tailwind offers predesigned widgets to build a site from scratch with fast UI development.
+                        Bootstrap comes with a set of pre-styled responsive, mobile-first components that possess a
+                        definite UI kit.
+                        <br>
+                        Tailwind CSS uses a set of utility classes to create a neat UI with more flexibility and
+                        uniqueness. Sites created using Bootstrap follow the generic pattern that makes them look
+                        identical.
+                        <br>
+                        Websites created using Tailwind CSS are much more customizable. Websites created with Bootstraps
+                        are known for their responsiveness and flawless design, but the looks are generic and similar.
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="collapse collapse-arrow">
+                    <input type="checkbox" class="peer" />
+                    <div
+                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
+                        What is The CSS box model
+                    </div>
+                    <div
+                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
+                        In web development, the CSS box model refers to how HTML elements are modeled in browser engines
+                        and how the dimensions of those HTML elements are derived from CSS properties. It is a
+                        fundamental concept for the composition of HTML webpages. The CSS box model is essentially a box
+                        that wraps around every HTML element.
+                    </div>
+                </div>
+                <!-- Question 4 -->
+                <div class="collapse collapse-arrow">
+                    <input type="checkbox" class="peer" />
+                    <div
+                        class="collapse-title text-dracula_color font-bold md:text-xl border-2 border-white rounded-lg peer-checked:rounded-b-none peer-checked:bg-[#506ec080]">
+                        What Is Semantic Tag
+                    </div>
+                    <div
+                        class="glass peer-checked:pt-2 collapse-content md:text-base border-0 rounded-lg rounded-t-none">
+                        The HTML semantics refers to the tags that provide meaning to an HTML page rather than just
+                        presentation. It makes HTML more comprehensible by better defining the different sections and
+                        layout of web pages. Semantic HTML elements describe their meaning in a human- and
+                        machine-readable way. Elements such as &lt;header&gt; , &lt;footer&gt; and &lt;article&gt; are
+                        all considered semantic because they accurately describe the purpose of the element and the type
+                        of content that is inside them.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ ends -->
+
+        <!-- company starts -->
+        <section class="hidden w-full rounded-lg py-10 px-6 text-gray-800 bg-white lg:flex flex-col gap-12">
+            <h1 class="font-bold text-4xl text-center">Trusted by over 800+ companies</h1>
+            <div class="flex justify-between grow w-full">
+                <img src="img/company/company-1.png" alt="Company 1" class="h-7">
+                <img src="img/company/company-2.png" alt="Company 2" class="h-7">
+                <img src="img/company/company-3.png" alt="Company 3" class="h-7">
+                <img src="img/company/company-4.png" alt="Company 4" class="h-7">
+                <img src="img/company/company-5.png" alt="Company 5" class="h-7">
+                <img src="img/company/company-6.png" alt="Company 6" class="h-7">
+            </div>
+        </section>
+        <!-- company ends -->
     </main>
 
     <!-- footer starts -->
