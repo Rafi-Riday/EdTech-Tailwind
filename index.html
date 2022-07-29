@@ -78,11 +78,11 @@
                     </li>
                     <li>
                         <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
-                            href="#">Success</a>
+                            href="#faq">FAQ</a>
                     </li>
                     <li>
                         <a onclick="toggle_nav()" class="nav_link lg:p-4 py-2 btn btn-ghost font-medium"
-                            href="#">About</a>
+                            href="#footer">About</a>
                     </li>
                 </ul>
             </div>
@@ -285,6 +285,71 @@
         </section>
         <!-- course ends -->
 
+        <!-- working starts -->
+        <section class="w-full h-auto">
+            <article class="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+                <img src="img/working.png" alt="working"
+                    class="w-full h-full rounded-t-2xl rounded-b-none md:rounded-l-2xl md:rounded-r-none">
+                <div
+                    class="flex flex-col items-center justify-center py-5 px-3 glass rounded-b-2xl md:rounded-r-2xl md:rounded-l-none gap-4">
+                    <h1 class="text-xl md:text-3xl lg:text-5xl font-semibold text-center">Explore The elearning
+                        Institute</h1>
+                    <p class="text-center text-sm md:text-base">We serve the best courses of the world.<br><br>Get Best
+                        courses for free. Paid courses support much more than you can think</p>
+                    <div class="grid grid-cols-1 2lg:grid-cols-2 gap-4">
+                        <div class="stats shadow">
+                            <div class="stat">
+                                <div class="stat-figure text-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block w-8 h-8 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="stat-title">Online Course</div>
+                                <div class="stat-value text-primary">3.2K+</div>
+                                <div class="stat-desc">21% more than last month</div>
+                            </div>
+                        </div>
+
+                        <div class="stats shadow">
+                            <div class="stat">
+                                <div class="stat-figure text-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block w-8 h-8 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div class="stat-title">Expert member</div>
+                                <div class="stat-value text-secondary">600+</div>
+                                <div class="stat-desc">21% more than last month</div>
+                            </div>
+                        </div>
+
+                        <div class="stats shadow">
+                            <div class="stat">
+                                <div class="stat-figure text-secondary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="inline-block w-8 h-8 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="stat-title">Rating & Review</div>
+                                <div class="stat-value">1k+</div>
+                                <div class="stat-desc">↗︎ 400 (22%)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn btn-primary text-white font-semibold">Read More</div>
+                </div>
+            </article>
+        </section>
+        <!-- working ends -->
+
         <!-- registration starts -->
         <section
             class="rounded-lg bg-sky-600 flex gap-5 flex-col items-center lg:flex-row lg:justify-between px-4 md:px-24 py-7 md:py-14 lg:py-20 text-center lg:text-left">
@@ -304,7 +369,7 @@
         <!-- registration ends -->
 
         <!-- FAQ stats -->
-        <section class="w-full grid grid-cols-1 gap-5 md:gap-6 lg:gap-7">
+        <section id="faq" class="w-full grid grid-cols-1 gap-5 md:gap-6 lg:gap-7">
             <h1 class="text-xl md:text-3xl lg:text-5xl font-semibold text-center">Frequently Asked Questions</h1>
             <p class="text-center text-sm md:text-base">It is a long established fact that a reader will be distracted
                 by the readable content of a page when
@@ -398,7 +463,7 @@
     </main>
 
     <!-- footer starts -->
-    <footer class="footer footer-center p-10 glass bg-black hover:bg-black text-dracula_color gap-4">
+    <footer id="footer" class="footer footer-center p-10 glass bg-black hover:bg-black text-dracula_color gap-4">
         <h2 class="font-bold text-3xl md:text-4xl">Tragic Bytes</h2>
         <p class="text-sm md:text-base">Providing Reliable Courses Since 2012<br>Copyright © 2022 - All right reserved
         </p>
