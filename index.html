@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
+                // added custom device
                 screens: {
                     'sm': '640px',
                     'md': '768px',
@@ -86,7 +89,7 @@
         </nav>
         <!-- Navigation ends -->
 
-        <div id="nav_end" class="w-0 h-6 bg-red-500 absolute z-40 top-[60px]"></div>
+        <div id="nav_end" class="w-0 h-0 absolute z-40 top-[60px]"></div>
 
         <!-- slider starts -->
         <div id="slider" class="md:px-12 lg:px-24">
